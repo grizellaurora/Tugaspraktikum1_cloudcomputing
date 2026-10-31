@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pink Aesthetic Post</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,500&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Quicksand', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 0;
+      background:
+        radial-gradient(circle at 15% 20%, #ffd6e8 0, transparent 40%),
+        radial-gradient(circle at 85% 80%, #ffc2d9 0, transparent 40%),
+        radial-gradient(circle at 80% 15%, #ffe5f1 0, transparent 35%),
+        #fff0f6;
+      color: #8a3b5c;
+      overflow-x: hidden;
+      position: relative;
+    }
+    .blob {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(60px);
+      opacity: 0.55;
+      animation: float 9s ease-in-out infinite;
+    }
+    .b1 { width: 260px; height: 260px; background: #ff9ec7; top: -60px; left: -60px; }
+    .b2 { width: 300px; height: 300px; background: #ffc6dd; bottom: -80px; right: -80px; animation-delay: 3s; }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(25px); }
+    }
+
+    .post {
+      position: relative;
+      z-index: 2;
+      width: 92%;
+      max-width: 440px;
+      background: rgba(255, 255, 255, 0.65);
+      backdrop-filter: blur(14px);
+      border: 1.5px solid rgba(255, 255, 255, 0.9);
+      border-radius: 28px;
+      box-shadow: 0 20px 50px rgba(255, 128, 170, 0.3);
+      overflow: hidden;
+    }
+
+    /* header akun */
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 20px 12px;
+    }
+    .avatar {
+      width: 46px; height: 46px;
+      border-radius: 50%;
+      padding: 2.5px;
+      background: linear-gradient(135deg, #ff9ec7, #ff5d9e, #ffc2d9);
+      flex-shrink: 0;
+    }
+    .avatar span {
+      display: flex; align-items: center; justify-content: center;
+      width: 100%; height: 100%;
+      border-radius: 50%;
+      background: #fff0f6;
+      font-size: 1.3rem;
+    }
+    .akun { flex: 1; text-align: left; }
+    .username {
+      font-weight: 700;
+      font-size: 0.98rem;
+      color: #d63a7f;
+    }
+    .bio {
+      font-size: 0.78rem;
+      line-height: 1.35;
+      margin-top: 2px;
+    }
+    .dots { font-weight: 700; letter-spacing: 2px; color: #d63a7f; }
+
+    /* foto */
+    .foto {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      background: linear-gradient(135deg, #ffc2d9, #ff9ec7 55%, #ffd6e8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5rem;
+    }
+    .foto img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* aksi */
+    .isi { padding: 14px 20px 22px; text-align: left; }
+    .aksi { display: flex; gap: 14px; font-size: 1.4rem; margin-bottom: 8px; }
+    .likes { font-weight: 700; font-size: 0.88rem; margin-bottom: 6px; }
+    .caption { font-size: 0.92rem; line-height: 1.5; }
+    .caption b { color: #d63a7f; }
+    .caption i { font-family: 'Playfair Display', serif; }
+    #jam {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: #ffe0ee;
+      font-weight: 600;
+      font-size: 0.8rem;
+    }
+    .btns { margin-top: 16px; text-align: center; }
+    button {
+      font-family: inherit;
+      padding: 11px 22px;
+      border: none;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #ff8fbf, #ff5d9e);
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 6px 16px rgba(255, 93, 158, 0.4);
+      transition: transform 0.2s;
+    }
+    button:hover { transform: translateY(-3px) scale(1.04); }
+
+    .heart {
+      position: fixed;
+      bottom: -30px;
+      font-size: 1.4rem;
+      animation: naik 3s linear forwards;
+      pointer-events: none;
+      z-index: 5;
+    }
+    @keyframes naik {
+      to { transform: translateY(-110vh); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+
+  <div class="post">
+    <div class="header">
+      <div class="avatar"><span>🌸</span></div>
+      <div class="akun">
+        <div class="username">ghezelle.__</div>
+      </div>
+      <div class="dots">•••</div>
+    </div>
+
+    <!-- Ganti dengan fotomu: taruh file foto.jpg di repository yang sama -->
+    <div class="foto">
+      🌷
+      <img src="foto.jpg" alt="Foto" onerror="this.style.display='none'">
+    </div>
+
+    <div class="isi">
+      <div class="aksi"><span>🤍</span><span>💬</span><span>✈️</span></div>
+      <div class="likes">Disukai oleh 1,5 jt</div>
+      <p class="caption">
+        <b>ghezelle.__</b>
+        <i>Seni indah dengan segala bentuk kesederhanaannya - itulah kamu</i> 🌸
+      </p>
+      <div id="jam"></div>
+      <div class="btns">
+        <button onclick="kirimLove()">💗 Kirim Love: <span id="hitung">0</span></button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function updateJam() {
+      document.getElementById('jam').textContent =
+        new Date().toLocaleString('id-ID');
+    }
+    setInterval(updateJam, 1000);
+    updateJam();
+
+    let n = 0;
+    function kirimLove() {
+      n++;
+      document.getElementById('hitung').textContent = n;
+      const h = document.createElement('div');
+      h.className = 'heart';
+      h.textContent = ['💗','💖','🌸','🎀'][Math.floor(Math.random()*4)];
+      h.style.left = Math.random() * 90 + 5 + 'vw';
+      document.body.appendChild(h);
+      setTimeout(() => h.remove(), 3000);
+    }
+  </script>
+</body>
+</html>
